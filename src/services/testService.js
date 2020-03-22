@@ -19,13 +19,7 @@ class TestService{
                         'Accept': 'text/html'
                     }
                 }
-                const res = await axios(url,{
-                    headers:{
-                        'Origin': 'https://youthful-sinoussi-836fd0.netlify.com',
-                        'Accept': 'text/html',
-                        'Access-Control-Request-Method': 'GET'
-                    }
-                });
+                const res = await axios(url);
                 console.log(res.data);
                 const data = res.data;
                 reslove(
