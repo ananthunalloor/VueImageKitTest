@@ -19,7 +19,13 @@ class TestService{
                         'Accept': 'text/html'
                     }
                 }
-                const res = await axios(options);
+                const res = await axios(url,{
+                    headers:{
+                        'Access-Control-Allow-Origin': '*',
+                        'Content-Type': 'application/json',
+                        'Accept': 'text/html'
+                    }
+                });
                 console.log(res.data);
                 const data = res.data;
                 reslove(
